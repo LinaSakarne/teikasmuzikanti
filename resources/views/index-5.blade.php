@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <title>Teikas Muzikanti</title>        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="js/script.js"></script>-->
+         <script src="js/script.js"></script>
+	<!--<link rel="stylesheet" href="/newcss.css" media="screen, print"/>-->
+        <link rel="stylesheet" href="css/newcss.css">
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>  
+    </head>
+    <body>
+            <div class="menus">
+                <ul id="abc-menu"> 
+                    <li><a href="index-2.html">KAS MĒS ESAM?</a></li>
+                    <li><a href="index-3.html">DALĪBNIEKI</a></li>
+                    <li><a href="index-1.html">GALERIJA</a></li>
+                    <li><a href="index-4.html">PASĀKUMI</a></li>
+                    <li><a href="index-5.html">ATSAUKSMES</a></li>
+                </ul>   
+            </div>    
+        <div class="Main_img">
+            <img src="/images/TM.jpg" alt="Muzikanti">
+        </div>
+        <hr>
+       
+        <div>  
+            <h1 id="jauta"> ATSAUKSMES</h1>
+            <h3>Vari ierakstīt savu atsauksmi, vai vienkārši ierakstīt, ko sirds vēlas!</h3>
+            <form id="Form" method="post" action="http://naivist.net/form/">
+                <label>E-pasts: *</label> <br>
+                <input id="email" type="text" name="email"><br>
+                <label>Komentārs:</label> <br>
+                <textarea id="coment" name="coment" ></textarea> <br>
+                <h3>Ja esi bijs kādā mūsu pasākumā, tad lūdzu ieraksti savu vērtējumu</h3>
+                <label>Diena, kad mūs satiki:</label><br>
+                <input id="day" type="number" name="day"> <br>
+                <label>Mēnesis</label><br>
+                <select id="month" name="month">
+                            <option value="">--</option>
+                            <option>January</option>
+                            <option>February</option> 
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select><br>
+                        <label>Gads</label><br>
+                        <input type="number" name="year" id="year"><br>
+                <label>Vērtējums:(1 līdz 10)</label><br>
+                <input id="grade" type="number" name="grade"><br>
+                <input type="submit" value="submit" id="submit"> <br>
+            </form>        
+        </div>
+        <br>
+        <hr>
+        <div class="footer">
+            <p>This page was created by Līna Sakārne in 2016</p>
+        </div>
+    </body>
+</html>
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
