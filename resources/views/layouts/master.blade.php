@@ -5,6 +5,14 @@
         <title>Teikas Muzikanti</title>        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+<!--        <script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
          <script src="/js/script.js"></script>
 	
@@ -20,16 +28,18 @@
                     <li><a href="/pasakumi">{{trans('messages.PASĀKUMI')}}</a></li>
                     <li><a href="/atsauksmes">{{trans('messages.ATSAUKSMES')}}</a></li>
                     <li>    </li>    
-                    <li>    </li>  
-                    <li>    </li>  
+                    <li>    </li>
+                    <li>    </li>
                     <li> <div class="lang"><a href="/lang/lv"><u>LV</u></a><a>  </a><a href="/lang/en"><u>EN</u></a></div></li>                      
-                    <li><a href="/auth/login">{{trans('messages.IENĀKT')}}</a></li>
-                    <li<a href="/auth/register">{{trans('messages.REĢISTRĒT LIETOTĀJU')}} liet</a></li>
+                   
+                   
                 </ul>   
             </div>    
         <div class="Main_img">
             <img src="/images/TM.jpg" alt="Muzikanti">
         </div>
+         <li><a href="/auth/login">{{trans('messages.IENĀKT')}}</a></li>
+                    <li><a href="/auth/register">REĢISTRĒT </a></li> 
         <hr>
        @section ('container')
        @show

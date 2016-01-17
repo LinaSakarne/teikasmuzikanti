@@ -1,17 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Routes File
-|--------------------------------------------------------------------------
-|
-| Here is where you will register all of the routes in an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-
 
 Route::get('lang/{lang}', function ($locale) {
    return redirect('/')->withCookie(cookie()->forever('language', $locale));
@@ -42,7 +30,7 @@ Route::get('/atsauksmes', function () {
 });
 
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web']], function () {   
     
     Route::get('auth/login', 'Auth\AuthController@getLogin');
     Route::post('auth/login', 'Auth\AuthController@postLogin');
