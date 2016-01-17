@@ -27,9 +27,11 @@
                     <li> <div class="lang"><a href="/lang/lv"><u>LV</u></a><a>  </a><a href="/lang/en"><u>EN</u></a></div></li>                      
                   @if (Auth::guest())
                     <li><a href="/auth/login">{{trans('messages.IENĀKT')}}</a></li>
-                  
-                    <li><a href="/auth/register">REĢISTRĒTIES </a></li> 
-                  @else   <li><a href="/logout">IZIET</a><li>
+                  @else  
+                        @if ( Auth::user())
+                        <li><a href="/auth/register">REĢISTRĒTIES </a></li> 
+                        @endif
+                    <li><a href="/logout">IZIET</a><li>
                  @endif
                 </ul>   
             </div>    

@@ -9,8 +9,7 @@
                 kuras dalībnieki katrs savā laikā pievienojās folkloras kopai Kokle. Gadu gaitā sapratām, 
                 ka esam labi sadziedājušies un saspēlējušies tāpēc nolēmām izveidot <i>"Teikas Muzikantus"</i>. </p>
            
-            <p>{} </p>
-            <p> $echo Events::where('id', '1') </p>
+
         </div>
         <hr>
         <div class="darbiba">
