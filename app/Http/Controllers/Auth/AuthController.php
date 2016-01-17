@@ -23,7 +23,8 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/grupas_info';
+    
     /**
      * Create a new authentication controller instance.
      *
@@ -61,4 +62,21 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+//    public function getLogout() {
+//
+//        $user = Auth::user();
+//        Auth::logout($user);
+//
+//        return Redirect::to('/');
+//    }
+    
+
+//    $data['logout'] = true;
+//    return redirect('/')->with('data',$data);
+//    public function getLogout()
+//    {
+//        $this->Auth->logout();
+//        Session::flush();
+//        return redirect('/');
+//    }
 }
