@@ -6,9 +6,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-         <script src="js/script.js"></script>
+         <script src="/js/script.js"></script>
 	
-        <link rel="stylesheet" href="css/newcss.css">
+        <link rel="stylesheet" href="/css/newcss.css">
         <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>  
     </head>
     <body>
@@ -24,6 +24,7 @@
                     <li>    </li>  
                     <li> <div class="lang"><a href="/lang/lv"><u>LV</u></a><a>  </a><a href="/lang/en"><u>EN</u></a></div></li>                      
                     <li><a href="/auth/login">{{trans('messages.IENĀKT')}}</a></li>
+                    <li<a href="/auth/register">{{trans('messages.REĢISTRĒT LIETOTĀJU')}} liet</a></li>
                 </ul>   
             </div>    
         <div class="Main_img">
