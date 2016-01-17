@@ -54,7 +54,7 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
+            'host'      => env('DB_HOST', 'teikasmuzikanti.dev'),
             'database'  => 'teikas',
             'username'  => 'teikas',
             'password'  => 'teikas',

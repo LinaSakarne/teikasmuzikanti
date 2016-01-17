@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Teikas Muzikanti</title>        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="js/script.js"></script>-->
-         <script src="js/script.js"></script>
-	<!--<link rel="stylesheet" href="/newcss.css" media="screen, print"/>-->
-        <link rel="stylesheet" href="css/newcss.css">
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>  
-    </head>
-    <body>
-            <div class="menus">
-                <ul id="abc-menu"> 
-                    <li><a href="index-2.html">KAS MĒS ESAM?</a></li>
-                    <li><a href="index-3.html">DALĪBNIEKI</a></li>
-                    <li><a href="index-1.html">GALERIJA</a></li>
-                    <li><a href="index-4.html">PASĀKUMI</a></li>
-                    <li><a href="index-5.html">ATSAUKSMES</a></li>
-                </ul>   
-            </div>    
-        <div class="Main_img">
-            <img src="/images/TM.jpg" alt="Muzikanti">
+@extends ('layouts.master')
+@section('container')
+  <section id="slider">        
+  <div class='container'>
+        <div>
+            <h1 id="kas">  KAS MĒS ESAM? </h1> 
+            <p> Esam muzicējoši jaunieši, kuri satikās folkloras kopā <i>"Kokle"</i>.
+                Visi dzīvojam Teikā, no kurienes arī mūsu nosaukums. Esam muzikāli instrumentāla apvienība,
+                kuras dalībnieki katrs savā laikā pievienojās folkloras kopai Kokle. Gadu gaitā sapratām, 
+                ka esam labi sadziedājušies un saspēlējušies tāpēc nolēmām izveidot <i>"Teikas Muzikantus"</i>. </p>
         </div>
         <hr>
         <div class="darbiba">
@@ -58,10 +43,7 @@
                  <a href="https://twitter.com/teikasmuzikanti"><img src="/images/twitterbig.png" alt="Teitter"></a> </li>
             </ul>
         </div>
-    
-        <div class="footer">
-            <p>This page was created by Līna Sakārne in 2015</p>
-        </div>
-    </body>
-</html>
-<?php
+  </div>  
+  </section>
+@endsection
+
