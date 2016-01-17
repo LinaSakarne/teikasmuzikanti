@@ -29,6 +29,9 @@ Route::get('/atsauksmes', function () {
     
 });
 
+Route::get('user', ['middleware' => 'auth', function() {
+    return view('user');
+}]);
 
 Route::group(['middleware' => ['web']], function () {   
     

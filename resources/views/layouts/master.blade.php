@@ -31,15 +31,14 @@
                     <li>    </li>
                     <li>    </li>
                     <li> <div class="lang"><a href="/lang/lv"><u>LV</u></a><a>  </a><a href="/lang/en"><u>EN</u></a></div></li>                      
-                   
-                   
+                   <li><a href="/auth/login">{{trans('messages.IENĀKT')}}</a></li>
+                   <li><a href="/auth/register">REĢISTRĒT </a></li> 
+                   <li><a href="/auth/logout">IZIET</a><li>
                 </ul>   
             </div>    
         <div class="Main_img">
             <img src="/images/TM.jpg" alt="Muzikanti">
         </div>
-         <li><a href="/auth/login">{{trans('messages.IENĀKT')}}</a></li>
-                    <li><a href="/auth/register">REĢISTRĒT </a></li> 
         <hr>
        @section ('container')
        @show
