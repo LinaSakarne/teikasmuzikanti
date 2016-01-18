@@ -59,56 +59,18 @@ Tās vērtība un trauslums ir būtiski iemesli, lai to iepazītu, sargātu un l
     });
 });
 
-
-   $(document).ready(function(){
-    document.getElementById("Form").addEventListener('submit', function(e) {
-        
-        var ok=true;
-        if (document.getElementById("email").value === "") {
-            alert("Lūdzu norādiet e-pasta adresi");
-            e.preventDefault();
-            ok=false;
-            return false;
-        }
-        
-        if(document.getElementById("day").value!=="" &&(document.getElementById("day").value<1 || document.getElementById("day").value>31)){
-            alert("Dienai jābūt satarp 1 un 31");
-           e.preventDefault();
-            ok=false;
-            return false;
-        }
-        if(document.getElementById("year").value!=="" &&(document.getElementById("year").value<2000 || document.getElementById("year").value>2015)){
-            alert("Nepareizi ievadīts gads");
-            e.preventDefault();
-            ok=false;
-            return false;
-        }
-        if (document.getElementById("grade").value!=="" &&(document.getElementById("grade").value<1 ||document.getElementById("grade").value>10)){
-            alert("Vērtējumam jābūt satarp 1 un 10");
-            e.preventDefault();
-            ok=false;
-            return false;
-        }
-        
-        if(ok===true){
-            alert("Iesūtīts");
-        }
-     
-});
-});
-
 var myImage=document.getElementById("myPhoto");
-var imageArray=["/IMG_9974.jpg", "/images/Cin.jpg", "/images/ALA.jpg", "/images/Meteni.png", "/images/Valmiermuiza.jpg", "/images/Kekatas.jpg"];
+var imageArray=["/images/IMG_9974.jpg","/images/Cin.jpg", "/images/ALA.jpg", "/images/Meteni.png", "/images/Valmiermuiza.jpg", "/images/Kekatas.jpg"];
 var imageIndex=0;
 
 function changeImage(){
     myPhoto.setAttribute("src", imageArray [imageIndex]);
     imageIndex++;
-    if (imageIndex>=imageArray.length) {
+    if (imageIndex>=imageArray.length-1) {
         imageIndex=0;
     }
 };
-var intervalHandle = setInterval(changeImage, 5000);
+var intervalHandle = setInterval(changeImage, 7000);
 
 myPhoto.onlcick=function(){
     clearInterval(intervalHandle);

@@ -4,12 +4,28 @@
   <div class='container'>
         <div>
             <h1 id="kas">  KAS MĒS ESAM? </h1> 
-            <p> Esam muzicējoši jaunieši, kuri satikās folkloras kopā <i>"Kokle"</i>.
-                Visi dzīvojam Teikā, no kurienes arī mūsu nosaukums. Esam muzikāli instrumentāla apvienība,
-                kuras dalībnieki katrs savā laikā pievienojās folkloras kopai Kokle. Gadu gaitā sapratām, 
-                ka esam labi sadziedājušies un saspēlējušies tāpēc nolēmām izveidot <i>"Teikas Muzikantus"</i>. </p>
-           
-
+            
+            @foreach ($info as $inf)
+            <p>
+                {{$inf->info}}
+            </p>
+            @endforeach
+            
+            @if (Auth::user())
+            
+                 {!! Form::open(['url'=>'grupas_info'])!!}
+                <div class="form-group">
+                    {!!Form::label('info', 'Info:')!!}
+                </div>     
+                 <div class="form-group">   
+                    {!!Form::textarea('info', null, ['class'=>'form-control'])!!}
+                 </div> 
+                  <div class="form-group">   
+                {!!Form::submit('Sūtīt', ['class'=> 'btn btn-primary form-control'])!!}
+                </div>
+                {!!Form::close()!!}
+                
+            @endif
         </div>
         <hr>
         <div class="darbiba">
@@ -47,5 +63,5 @@
         </div>
   </div>  
   </section>
-@endsection
+@stop
 

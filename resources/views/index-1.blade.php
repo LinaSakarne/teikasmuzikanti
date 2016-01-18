@@ -4,7 +4,8 @@
   <div class='container'>
         <div class="pictures">
             <h1 id="atteli"> GALERIJA </h1>
-            <div class="thumbnails">
+            <div class="thumbnails"> 
+                
                 <img onmouseover="myPhoto.src=/images/IMG_9974.src" id='IMG_9974' src="/images/IMG_9974.jpg" alt="Muzikanti" />
                 <img onmouseover="myPhoto.src=/images/Cin.src" id='Cin' src="/images/Cin.jpg" alt="Muzikanti"/>
                 <img onmouseover="myPhoto.src=/images/ALA.src" id="ALA" src="/images/ALA.jpg" alt="Muzikanti"/>
@@ -14,7 +15,7 @@
             </div>
         </div>   
         <div class='photos' >
-            <img id="myPhoto" src="/images/ALA.jpg" alt="Muzikanti"/> 
+            <img id="myPhoto" src="/images/IMG_9974.jpg" alt="Muzikanti"/> 
         </div>
   </div>
 </section>

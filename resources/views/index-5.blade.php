@@ -4,13 +4,40 @@
   <div class='container'>
         <div>  
             <h1 id="jauta"> ATSAUKSMES</h1>
-            <h3>Vari ierakstīt savu atsauksmi, vai vienkārši ierakstīt, ko sirds vēlas!</h3>
-            <form id="Form" method="post" action="http://naivist.net/form/">
-                <label>E-pasts: *</label> <br>
-                <input id="email" type="text" name="email"><br>
-                <label>Komentārs:</label> <br>
-                <textarea id="coment" name="coment" ></textarea> <br>
-                <h3>Ja esi bijs kādā mūsu pasākumā, tad lūdzu ieraksti savu vērtējumu</h3>
+            
+            @if(Auth::guest())  
+            <h3>Vari ierakstīt savu atsauksmi, vai vienkārši ierakstīt, ko sirds vēlas!</h3> 
+           
+            {!! Form::open(['url'=>'atsauksmes'])!!}
+                <div class="form-group">
+                    {!!Form::label('email', 'E-pasts:')!!}
+                </div>     
+                 <div class="form-group">   
+                    {!!Form::text('email', null, ['class'=>'form-control'])!!}
+                 </div>      
+                <div class="form-group">
+                    {!!Form::label('name', 'Vārds:')!!}
+                 </div>   
+                   
+                <div class="form-group">
+                    {!!Form::text('name', null, ['class'=>'form-control'])!!}
+                 </div>   
+                    
+                <div class="form-group">    
+                    {!!Form::label('name', 'Komentārs:')!!}
+                </div>    
+                    
+                <div class="form-group">    
+                    {!!Form::textarea('coment', null, ['class'=>'form-control'])!!}
+                </div>    
+                   
+                 <div class="form-group">   
+                {!!Form::submit('Sūtīt', ['class'=> 'btn btn-primary form-control'])!!}
+                </div>
+                {!!Form::close()!!}
+               
+                
+<!--            <h3>Ja esi bijs kādā mūsu pasākumā, tad lūdzu ieraksti savu vērtējumu</h3>
                 <label>Diena, kad mūs satiki:</label><br>
                 <input id="day" type="number" name="day"> <br>
                 <label>Mēnesis</label><br>
@@ -31,10 +58,23 @@
                         </select><br>
                         <label>Gads</label><br>
                         <input type="number" name="year" id="year"><br>
-                <label>Vērtējums:(1 līdz 10)</label><br>
-                <input id="grade" type="number" name="grade"><br>
-                <input type="submit" value="submit" id="submit"> <br>
-            </form>        
+                <label>Vērtējums:(1 līdz 10)</label><br>-->
+                <!--<input id="grade" type="number" name="grade"><br>-->
+              
+            @endif
+            <br>
+            <h3>ATSAUKSMES</h3>   
+            
+            @foreach($ats as $at) 
+            <table>
+            <tr>
+                <td> <h4>{{$at->name}}<h4></td>
+                <td>{{$at->atsauksme}}</td>
+            </tr>
+              </table>
+            @endforeach
+           
+                   
         </div>
   </div>  
   </section>
