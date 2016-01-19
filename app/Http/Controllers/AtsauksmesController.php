@@ -14,8 +14,13 @@ class AtsauksmesController extends Controller
        {
             $ats=Atsauksmes::all();
             return view('index-5', compact('ats'));  
-       }
+       } 
        
+       public function index2()
+       {
+            $ats=Atsauksmes::all();
+            return view('dzest_atsauksmes', compact('ats'));  
+       }
        public function store(Request $request)
        {
            
@@ -29,6 +34,14 @@ class AtsauksmesController extends Controller
            
            return redirect('atsauksmes'); 
            }
-           
+       } 
+       public function deleteAts(Request $request){
+            $post=$request->all();
+            $i=$post['id'];
+            if($i!=" ")
+            {       
+            Atsauksmes::where('id','=', $i)->delete();
+            return redirect('atsauksmes');     
+           }
        }
 }

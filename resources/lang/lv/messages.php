@@ -1,7 +1,7 @@
 <?php
 return [
    
-'KAS MĒS ESAM?' => 'KAS MĒS ESAM?',
+'PAR MUMS' => 'PAR MUMS',
 
 'DALĪBNIEKI' => 'DALĪBNIEKI',
 

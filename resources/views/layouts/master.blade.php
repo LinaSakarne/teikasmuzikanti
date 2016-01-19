@@ -16,7 +16,7 @@
     <body>
             <div class="menus">
                 <ul id="abc-menu"> 
-                   <li><a href="/grupas_info">{{trans('messages.KAS MĒS ESAM?')}}</a></li>
+                   <li><a href="/grupas_info">{{trans('messages.PAR MUMS')}}</a></li>
                     <li><a href="/dalibnieki">{{trans('messages.DALĪBNIEKI')}}</a></li>
                     <li><a href="/galerija">{{trans('messages.GALERIJA')}}</a></li>
                     <li><a href="/pasakumi">{{trans('messages.PASĀKUMI')}}</a></li>
@@ -31,7 +31,7 @@
                 @else  
                     <li><a href="/logout">IZIET</a><li>
                     @if(Auth::user()->name == 'Administrator')
-                    <li><a href="/register">REĢISTRĒT JAUNU LIETOTĀJU </a></li>
+                    <li><a href="/lietotaji"> LIETOTĀJI </a></li>
                     @endif
                 @endif
                  

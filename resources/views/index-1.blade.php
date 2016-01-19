@@ -5,7 +5,6 @@
         <div class="pictures">
             <h1 id="atteli"> GALERIJA </h1>
             <div class="thumbnails"> 
-                
                 <img onmouseover="myPhoto.src=/images/IMG_9974.src" id='IMG_9974' src="/images/IMG_9974.jpg" alt="Muzikanti" />
                 <img onmouseover="myPhoto.src=/images/Cin.src" id='Cin' src="/images/Cin.jpg" alt="Muzikanti"/>
                 <img onmouseover="myPhoto.src=/images/ALA.src" id="ALA" src="/images/ALA.jpg" alt="Muzikanti"/>
@@ -17,6 +16,21 @@
         <div class='photos' >
             <img id="myPhoto" src="/images/IMG_9974.jpg" alt="Muzikanti"/> 
         </div>
+      @if(Auth::user())
+      <h3> Ievieto jaunu bildi</h3>
+       {!! Form::open(['url'=>'galerija'])!!}
+                <div class="form-group">
+                    {!!Form::label('file', 'Izvēlies bildi:')!!}
+                </div>     
+                 <div class="form-group">   
+                    {!!Form::file('file', ['class'=>'form-control'])!!}
+                 </div>   
+                <div class="form-group">   
+                    {!!Form::submit('Sūtīt', ['class'=> 'btn btn-primary form-control'])!!}
+                </div>
+                    {!!Form::close()!!}
+      @endif
+      
   </div>
 </section>
 @endsection

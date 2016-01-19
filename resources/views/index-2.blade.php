@@ -5,7 +5,7 @@
         <div>
             <h1 id="kas">  KAS MĒS ESAM? </h1> 
             
-            @foreach ($info as $inf)
+           @foreach ($info as $inf)
             <p>
                 {{$inf->info}}
             </p>

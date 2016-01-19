@@ -1,7 +1,7 @@
 <?php
 
 return [
-'KAS MĒS ESAM?' => 'WHO ARE WE?',
+'PAR MUMS' => 'ABOUT US',
 
 'DALĪBNIEKI' => 'PARTICIPANTS',
 

@@ -12,6 +12,7 @@ class InfoController extends Controller
 
     public function index(){
         $info=Info::all();
+        $info1=Info::where('id','1');
        
         return view('index-2', compact('info'));  
     }
