@@ -3,33 +3,39 @@
   <section id="slider">        
   <div class='container'>
         <div>
-            <h1 id="kas">  KAS MĒS ESAM? </h1> 
-            
+            <h1 id="kas"> {{trans('messages.KAS MĒS ESAM?')}} </h1> 
+            @if (Auth::user())
+             
            @foreach ($info as $inf)
+            <p>
+                {{$inf->info}}
+            </p> 
+                {!! Form::open(['url'=>'grupas_info'])!!}
+                <div class="form-group">
+                    {!!Form::label('info', 'Info:')!!}
+                </div>    
+                 <div class="form-group">   
+                    {!!Form::textarea('info', $inf->info, ['class'=>'form-control'])!!}
+                 </div> 
+            
+            @endforeach
+                  <div class="form-group">   
+                {!!Form::submit('Sūtīt', ['class'=> 'btn btn-primary form-control'])!!}
+                </div>
+                {!!Form::close()!!} 
+            @else
+            @foreach ($info as $inf)
             <p>
                 {{$inf->info}}
             </p>
             @endforeach
-            
-            @if (Auth::user())
-            
-                 {!! Form::open(['url'=>'grupas_info'])!!}
-                <div class="form-group">
-                    {!!Form::label('info', 'Info:')!!}
-                </div>     
-                 <div class="form-group">   
-                    {!!Form::textarea('info', null, ['class'=>'form-control'])!!}
-                 </div> 
-                  <div class="form-group">   
-                {!!Form::submit('Sūtīt', ['class'=> 'btn btn-primary form-control'])!!}
-                </div>
-                {!!Form::close()!!}
-                
             @endif
+            
+            
         </div>
         <hr>
         <div class="darbiba">
-            <h1 id="ko"> KO MĒS DARĀM? </h1>
+            <h1 id="ko"> {{trans('messages.KO MĒS DARĀM?')}}  </h1>
             <p><i> "Teikas Muzikanti"</i> piedāvā Jums dažādas muzikāli izklaidējošas un izglītojošas aktivitātes:</p>
                 <ul>
                     <li> Sadziedāšanos, danču vakarus, viesību spēles, rotaļas utt.</li>
@@ -47,7 +53,7 @@
         </div> 
         <hr>
         <div class="contacts">
-            <h1 id="kontakti"> KONTAKTI </h1>
+            <h1 id="kontakti"> {{trans('messages.KONTAKTI')}} </h1>
             
             <p> Mums var zvanīt:</p>
             <ul id="list"> 

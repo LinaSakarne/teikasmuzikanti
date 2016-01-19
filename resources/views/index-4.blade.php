@@ -3,8 +3,8 @@
   <section id="slider">        
   <div class='container'>
         <div>
-            <h1 id="pasakumi"> PASĀKUMI </h1>
-            <p> Tuvākie pasākumi, kur mūs varēs satikt:</p>
+            <h1 id="pasakumi"> {{trans('messages.PASĀKUMI')}} </h1>
+            <p>{{trans('messages.Tuvākie pasākumi, kur mūs varēs satikt:')}}</p>
 
             @foreach($event as $events)
                 <p><b> {{$events->kad}}</b> {{$events->kur}} {{$events->event}}</p>

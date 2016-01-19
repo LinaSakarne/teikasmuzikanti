@@ -3,7 +3,7 @@
   <section id="slider">        
   <div class='container'>
         <div class="daliba">
-            <h1 id="dal"> DALĪBNIEKI</h1>
+            <h1 id="dal"> {{trans('messages.DALĪBNIEKI')}}</h1>
             <ul>
                 <li id="dal1"> 
                     <img src="/images/Lina.jpg" alt="Muzikanti" >

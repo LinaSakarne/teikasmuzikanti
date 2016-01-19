@@ -29,9 +29,9 @@
                 @if (Auth::guest())
                     <li><a href="/login">{{trans('messages.IENĀKT')}}</a></li>
                 @else  
-                    <li><a href="/logout">IZIET</a><li>
+                    <li><a href="/logout">{{trans('messages.IZIET')}}</a><li>
                     @if(Auth::user()->name == 'Administrator')
-                    <li><a href="/lietotaji"> LIETOTĀJI </a></li>
+                    <li><a href="/lietotaji">{{trans('messages.LIETOTĀJI')}}  </a></li>
                     @endif
                 @endif
                  
