@@ -1,6 +1,6 @@
 @extends ('layouts.master')
 @section('container')
-  <section id="slider"> 
+<section id="slider"> 
 <div class="container">
     <div class="row">
        @if (Auth::user()->name=='Administrator')
@@ -9,7 +9,6 @@
             <th>LIETOTĀJA VĀRDS</th>
             <th> LIETOTĀJA E-PASTS</th>
        @foreach($event as $user)
-        
         <tr>
              <td>{{$user->id}}</td>
             <td>{{$user->name}}</td>

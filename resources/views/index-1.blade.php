@@ -4,13 +4,12 @@
   <div class='container'>
         <div class="pictures">
             <h1 id="atteli"> {{trans('messages.GALERIJA')}} </h1>
-            <div class="thumbnails"> 
-                <img onmouseover="myPhoto.src=/images/IMG_9974.src" id='IMG_9974' src="/images/IMG_9974.jpg" alt="Muzikanti" />
-                <img onmouseover="myPhoto.src=/images/Cin.src" id='Cin' src="/images/Cin.jpg" alt="Muzikanti"/>
-                <img onmouseover="myPhoto.src=/images/ALA.src" id="ALA" src="/images/ALA.jpg" alt="Muzikanti"/>
-                <img onmouseover="myPhoto.src=/images/Meteni.src" id="Meteni" src="/images/Meteni.png" alt="Muzikanti"/>
-                <img onmouseover="myPhoto.src=/images/Valmiermuiza.src" id="Valmiermuiza" src="/images/Valmiermuiza.jpg" alt="Muzikanti"/>
-                <img onmouseover="myPhoto.src=/images/Kekatas.src" id="Kekatas" src="/images/Kekatas.jpg" alt="Muzikanti"/> 
+            <div class="thumbnails">
+                 <img onmouseover="myPhoto.src=/images/IMG_9974.jpg.src" id='IMG_9974' src="/images/IMG_9974.jpg" alt="Muzikanti" />
+                @foreach ($ats as $img)
+                
+                 <img onmouseover="myPhoto.src={{$img->name}}.src" id='IMG_9974' src="{{$img->name}}" alt="Muzikanti" />
+                @endforeach
             </div>
         </div>   
         <div class='photos' >
@@ -18,17 +17,21 @@
         </div>
       @if(Auth::user())
       <h3> Ievieto jaunu bildi</h3>
-       {!! Form::open(['url'=>'galerija'])!!}
+       {!! Form::open(array('action'=> 'PhotoController@imageUpload', 'files'=>'true'))!!}
                 <div class="form-group">
-                    {!!Form::label('file', 'Izvēlies bildi:')!!}
-                </div>     
+                    {!!Form::label('image', 'Izvēlies bildi:')!!} 
+                </div>  
+       <div class='text-danger'>{{$errors->first('image')}}</div>
                  <div class="form-group">   
-                    {!!Form::file('file', ['class'=>'form-control'])!!}
+                    {!!Form::file('image', ['class'=>'form-control','files'=>'true'])!!}
                  </div>   
                 <div class="form-group">   
-                    {!!Form::submit('Sūtīt', ['class'=> 'btn btn-primary form-control'])!!}
+                    {!!Form::submit('Sūtīt', ['class'=> 'btn btn-primary form-control','files'=>'true'])!!}
                 </div>
                     {!!Form::close()!!}
+                   
+                    
+                    
       @endif
       
   </div>

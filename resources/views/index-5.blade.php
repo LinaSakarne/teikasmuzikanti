@@ -2,7 +2,7 @@
 @section('container')
   <section id="slider">        
   <div class='container'>
-        <div>  
+         
             <h1 id="jauta">{{trans('messages.ATSAUKSMES')}} </h1>
             
             @if(Auth::guest())  
@@ -44,16 +44,17 @@
             
             <h3>{{trans('messages.ATSAUKSMES')}}</h3>   
             <table>
-                <th>VĀRDS</th>
-                <th>KOMENTĀRS</th>
+               
             @foreach($ats as $at) 
             <tr>
-                <td> <h4>{{$at->name}}<h4></td>
+                <td> <h4>{{$at->name}}:<h4></td>
+            </tr>
+            <tr> 
                 <td>{{$at->atsauksme}}</td>
             </tr>
             @endforeach
            </table>      
-        </div>
+        
   </div>  
   </section>
 @endsection

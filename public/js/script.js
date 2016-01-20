@@ -58,11 +58,21 @@ Tās vērtība un trauslums ir būtiski iemesli, lai to iepazītu, sargātu un l
         }
     });
 });
-
+var imageArray=["/images/web/DXnv7S.jpg", "/images/web/4qe2v4.jpg", "/images/web/t1v46S.jpg", "/images/web/TgmFiC.jpg", "/images/web/FtUqiJ.jpg", "/images/web/n5DZy3.jpg", "/images/web/nVEFcW.jpg"];
+//var folderToCheck = '/images/web/';
+//var tinyMCEImageList = [];
+//var fso = new ActiveXObject('Scripting.FileSystemObject');
+//if (fso.FolderExists(folderToCheck)) {
+//    var f = fso.GetFolder(folderToCheck);   
+//    var e = new Enumerator(f.files);
+//    for(var i=1; !e.atEnd(); e.moveNext(), i++) {
+//        tinyMCEImageList[tinyMCEImageList.length] = ['Library image ' + i, e.item()];
+//    }
+//}
+//
+//var images=tinyMCEImageList;
 var myImage=document.getElementById("myPhoto");
-var imageArray=["/images/IMG_9974.jpg","/images/Cin.jpg", "/images/ALA.jpg", "/images/Meteni.png", "/images/Valmiermuiza.jpg", "/images/Kekatas.jpg"];
 var imageIndex=0;
-
 function changeImage(){
     myPhoto.setAttribute("src", imageArray [imageIndex]);
     imageIndex++;

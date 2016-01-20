@@ -139,8 +139,10 @@ div.thumbnails {
     border: 4px solid black;
     padding: 1px;
     margin: 0 10px 10px 0;
+    
 }
 .thumbnails img:hover{
+   
     border: 4px solid black;
     cursor: pointer; 
 }
@@ -174,6 +176,14 @@ div.photos{
 }
 #apraksts{
      text-align: justify;
+}
+ .row table, th, td, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    text-align:left;
 }
 
 @media print{

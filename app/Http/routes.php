@@ -14,6 +14,7 @@ Route::get('/dalibnieki', function () {
 
 Route::get('galerija', 'PhotoController@index');
 Route::post('galerija', 'PhotoController@imageUpload');
+
 Route::get('atsauksmes', 'AtsauksmesController@index');
 Route::post('atsauksmes','AtsauksmesController@store');
 Route::get('grupas_info','InfoController@index');

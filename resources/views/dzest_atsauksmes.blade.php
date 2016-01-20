@@ -4,11 +4,9 @@
   <div class='container'>
         <div>  
             <h1 id="jauta"> ATSAUKSMES</h1>
-            
             @if(Auth::user()->name=='Administrator')  
             <br>
             <h3>ATSAUKSMES</h3>   
-
             @foreach($ats as $at) 
             <table>
             <tr>

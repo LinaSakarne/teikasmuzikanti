@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Photo;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Validator;
 class PhotoController extends Controller
 {
       public function index()
@@ -14,12 +14,29 @@ class PhotoController extends Controller
             $ats=Photo::all();
             return view('index-1', compact('ats'));  
        }
+      
+ 
        
       public function imageUpload(Request $request)
       {
-//         $file=$request->file('file');
-//         $file=Input::file('file');
-         $filename='images/'.uniqid();
-         $file->move( $filename);
+
+          $rules =['image' => 'required|image|mimes:jpeg',];        
+          $validator=Validator::make($request->all(), $rules);
+   
+          if($validator->fails()){
+            return redirect('galerija')->withErrors($validator);  
+          }
+
+          else{
+            $name1=str_random(6).'.jpg';
+            $request->file('image')->move('images/web/', $name1);
+             $photo=new Photo;
+             $photo->name='images/web/'.$name1;
+             $photo->save();
+             return redirect('galerija');
+          }
+    
+
+        
       } 
 }
